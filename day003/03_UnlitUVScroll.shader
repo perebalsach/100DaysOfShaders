@@ -66,22 +66,25 @@ Shader "100Days/03_UnlitUVScroll"
             
             fixed4 frag (vertexOutput i) : SV_Target
             {
-                fixed2 scrollUV = i.uv;
+                fixed2 scrollUV_1 = i.uv;
+                fixed2 scrollUV_2 = i.uv2;
 
                 fixed xScroll = _UScroll * _Time * (_Speed + _OffsetSpeed);
                 fixed yScroll = _VScroll * _Time * (_Speed - _OffsetSpeed);
 
-                scrollUV += fixed2(xScroll, yScroll);
+                scrollUV_1 += fixed2(xScroll, yScroll);
+                scrollUV_2 += fixed2(xScroll, yScroll);
 
-                fixed4 baseTexture = tex2D(_BaseTex, scrollUV);
-                fixed4 blendTexture = tex2D(_BlendTex, scrollUV);
+                fixed4 baseTexture = tex2D(_BaseTex, scrollUV_1);
+                fixed4 blendTexture = tex2D(_BlendTex, scrollUV_2);
                 
 
             #if DEBUGVC_ON
                 return i.vertexColor;
             #else
                 // Blend textures based on the vertex color data
-                return lerp(baseTexture, blendTexture, i.vertexColor);
+                fixed4 col = lerp(baseTexture, blendTexture, i.vertexColor);
+                return col * _Color;
             #endif
             }
             ENDCG
