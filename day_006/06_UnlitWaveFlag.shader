@@ -12,7 +12,8 @@ Shader "100Days/06_UnlitWaveFlag"
     {
         Tags { "Queue"="Transparent" "RenderType"="Transparent" "IgnoreProjector"="True" }
         Blend SrcAlpha OneMinusSrcAlpha
-
+        ZWrite Off
+        
         Pass
         {
             CGPROGRAM
