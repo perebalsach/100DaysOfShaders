@@ -10,7 +10,8 @@ Shader "100Days/06_UnlitWaveFlag"
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
+        Tags { "Queue"="Transparent" "RenderType"="Transparent" "IgnoreProjector"="True" }
+        Blend SrcAlpha OneMinusSrcAlpha
 
         Pass
         {
@@ -44,7 +45,7 @@ Shader "100Days/06_UnlitWaveFlag"
             vertexOutput vert (vertexInput v)
             {
                 vertexOutput o;
-                v.vertex.x += (sin( _Time * _Freq) * _Amplitude) * v.vertexColor;
+                v.vertex.y = (sin(v.uv - (_Time * _Speed) * _Freq) * _Amplitude) * v.vertexColor;
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 //Repeat Textures
                 o.uv = TRANSFORM_TEX(v.uv, _BaseTex); 
