@@ -7,6 +7,8 @@ Shader "100Days/06_UnlitWaveFlag"
         _Speed("Speed", Range(0, 10)) = 0
         _Amplitude ("Amplitude", Range(0, 0.1)) = 0.002
         _Freq("Frequency", Range(0, 100)) = 1
+        [Header(Wind Options)]
+        [KeywordEnum(X, Y, Z)] _Direction("Set Direction", Float) = 0
     }
     SubShader
     {
@@ -21,6 +23,8 @@ Shader "100Days/06_UnlitWaveFlag"
             #pragma fragment frag
 
             #include "UnityCG.cginc"
+
+            #pragma multi_compile _DIRECTION_X _DIRECTION_Y _DIRECTION_Z
 
             struct vertexInput
             {
@@ -46,7 +50,13 @@ Shader "100Days/06_UnlitWaveFlag"
             vertexOutput vert (vertexInput v)
             {
                 vertexOutput o;
+            #if _DIRECTION_X 
+                v.vertex.x = (sin(v.uv - (_Time * _Speed) * _Freq) * _Amplitude) * v.vertexColor;
+            #elif _DIRECTION_Y 
                 v.vertex.y = (sin(v.uv - (_Time * _Speed) * _Freq) * _Amplitude) * v.vertexColor;
+            #elif _DIRECTION_Z
+                v.vertex.z = (sin(v.uv - (_Time * _Speed) * _Freq) * _Amplitude) * v.vertexColor;
+            #endif
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 //Repeat Textures
                 o.uv = TRANSFORM_TEX(v.uv, _BaseTex); 
