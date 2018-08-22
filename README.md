@@ -1,18 +1,35 @@
 # 100DaysOfShaders!
 
-Hi! I'm going to try to create 100 shaders one each day. Lets see what I can get :)
+This is the repo for the 100DaysOf challange. I'll do 100 Shaders but not in 100 Days :)
+As you all know sometimes you can get cought with a little nasty thing with the bloody shaders. So my goal
+is to develop nice and cool shaders to get better writing shaders in unity.
 
+All the shaders will be easly portable to GLSL, so it will be a good reference for anyone who want to learn some shader coding.
+Happy shaders!! ^_^
+
+Pere.
 
 ## Shader List
 
-#### - Unlit Shaders
-- Unlit Vertex Color
-- Unlit Vertex Color Blend 2/3 Textures
-- Unlit Vertex Color UV Scroll (U & V)
-- Unlit Vertex Color UV Scroll 2 Textures
-- Unlit Vertex Color movement based on VC Mask (Grass, Trees, …)
+#### - Shaders List
+- 01_vertexColorUnlit
+- 02_UnlitBlendTexturesVertexColors
+- 03_UnlitUVScroll
+- 04_UnlitBlendTexturesVertexColorsFoam
+- 05_UnlitPushNormals
+- 06_UnlitWaveFlag
+- 07_UnlitVertexDisplacement
+- 08_UnlitShore
+- 09_UnlitDistortUVs
+- 10_UnlitGradient
+- 11_UnlitGradient3Colors
+- 12_UnlitDissolve
+- 13_
+- 14_
+- 15_
 
-#### - Vertex Displacement / Movement Shaders
+
+#### - Vertex Displacement 
 - Offset geometry (based on vertex normal)
 - Flag Shader (Sin wave)
 - Displacement based on image
