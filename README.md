@@ -23,8 +23,8 @@ Pere.
 - 09_UnlitDistortUVs
 - 10_UnlitGradient
 - 11_UnlitGradient3Colors
-- 12_UnlitDissolve
-- 13_
+- 12_UnlitDissolve_basic
+- 13_UnlitDissolve_advanced
 - 14_
 - 15_
 
