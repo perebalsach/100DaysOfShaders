@@ -1,4 +1,4 @@
-Shader "100Days/06_UnlitWaveFlag"
+Shader "100DaysOfShaders/06_UnlitWaveFlag"
 {
     Properties
     {

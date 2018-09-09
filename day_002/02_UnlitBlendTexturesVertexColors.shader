@@ -1,4 +1,4 @@
-Shader "100Days/02_UnlitBlendTexturesVertexColors"
+Shader "100DaysOfShaders/02_UnlitBlendTexturesVertexColors"
 {
     Properties
     {

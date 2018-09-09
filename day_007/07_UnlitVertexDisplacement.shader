@@ -1,4 +1,4 @@
-Shader "100Days/07_UnlitVertexDisplacement"
+Shader "100DaysOfShaders/07_UnlitVertexDisplacement"
 {
     Properties
     {

@@ -1,4 +1,4 @@
-Shader "100Days/03_UnlitUVScroll"
+Shader "100DaysOfShaders/03_UnlitUVScroll"
 {
     Properties
     {

@@ -1,4 +1,4 @@
-Shader "100Days/04_WaterFoam"
+Shader "100DaysOfShaders/04_WaterFoam"
 {
     Properties
     {

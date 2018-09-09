@@ -1,4 +1,4 @@
-Shader "100Days/13_UnlitDissolveAdvanced"
+Shader "100DaysOfShaders/13_UnlitDissolveAdvanced"
 {
     Properties
     {

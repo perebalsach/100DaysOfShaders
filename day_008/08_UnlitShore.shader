@@ -1,4 +1,4 @@
-Shader "100Days/08_UnlitShore"
+Shader "100DaysOfShaders/08_UnlitShore"
 {
     Properties
     {

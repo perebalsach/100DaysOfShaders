@@ -1,4 +1,4 @@
-Shader "100Days/11_UnlitGradient3Colors"
+Shader "100DaysOfShaders/11_UnlitGradient3Colors"
 {
     Properties
     {

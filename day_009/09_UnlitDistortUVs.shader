@@ -1,4 +1,4 @@
-Shader "100Days/09_UnlitDistortUVs"
+Shader "100DaysOfShaders/09_UnlitDistortUVs"
 {
     Properties
     {
